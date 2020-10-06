@@ -1,0 +1,60 @@
+.header {
+  background: black;
+  color: grey;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  transition: 0.2s;
+} 
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: grey;
+  text-align: center;
+  font-size: 13px;
+}
+
+#fixed {
+	border-style: solid;
+	margin-top: 10px;
+	border-color: grey;
+	background-color: grey;
+	position: fixed; 
+
+}
+
+/*body {
+	background-image: url("images/blue.jpeg");
+	height: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #cccccc;
+} */
+
+#chef {
+	margin-top: 0px;
+	margin-right: 100%;
+}
+
+/*#(li id ) {
+	margin-left: 50%;
+
+}
+
+#(li id) {
+  margin-right: 20%;
+}*/
+
+#breakfast {
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+
