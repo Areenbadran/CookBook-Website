@@ -133,28 +133,28 @@ $("#info").one("click", function() {
                         //To add More Recipes//
 
 $("#add").one("click", function() {
-	$("body").append("<p>Recipe Name:</p>", "<input id='input-recipe1'></input> <button id='add-recipe1'>add</button>");
+	$("body").append("<p class='yay'>Recipe Name:</p>", "<input id='input-recipe1' class='yay' onchange='saveValue(this)'></input> <button id='add-recipe1' class='yay'>add</button>");
 	    $("#add-recipe1").click( function() {
 	    	var word = $("#input-recipe1").val();
-	    	$("<p></p>").text(word).appendTo("#all");
+	    	$("<p class='del'></p>").text(word).appendTo("#all");
 	    	word = $("#input-recipe1").val('');
 	    })
 	});
 
 $("#add").one("click", function() {
-	$("body").append("<p>Recipe Ingredients:</p>", "<input id='input-recipe2'></input> <button id='add-recipe2'>add</button>");
+	$("body").append("<p class='yay'>Recipe Ingredients:</p>", "<input id='input-recipe2' class='yay'></input> <button id='add-recipe2' class='yay'>add</button>");
 	    $("#add-recipe2").click( function() {
 	    	var word = $("#input-recipe2").val();
-	    	$("<li></li>").text(word).appendTo("#all");
+	    	$("<li class='del'></li>").text(word).appendTo("#all");
 	    	word = $("#input-recipe2").val('');
 	    })
 	});
 
 $("#add").one("click", function() {
-	$("body").append("<p>Recipe Steps</p>", "<input id='input-recipe3'></input> <button id='add-recipe3'>add</button>");
+	$("body").append("<p class='yay'>Recipe Steps</p>", "<input id='input-recipe3' class='yay'></input> <button id='add-recipe3' class='yay'>add</button>");
 	    $("#add-recipe3").click( function() {
 	    	var word = $("#input-recipe3").val();
-	    	$("<li></li>").text(word).appendTo("#all");
+	    	$("<li class='del'></li>").text(word).appendTo("#all");
 	    	word = $("#input-recipe3").val('');
 	    })
 	});
@@ -163,9 +163,23 @@ $("#add").one("click", function() {
                           //Button Recipes To see all the added Recipes//
 
 $("#recipes").one("click", function() {
-	$("#all").show();
+     $(".yay").hide();
 });
 
+//==============================================================================================
+                         //Home Button//
+
+$("#home").click( function() {
+	window.location.reload();
+});
+
+
+//================================================================================================
+                         //Remove Button//
+
+$("#delete").click( function() {
+       $(".del").hide();
+});                       
 
 
 

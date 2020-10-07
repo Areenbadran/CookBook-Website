@@ -1,6 +1,6 @@
 .header {
   background: black;
-  color: grey;
+  color: white;
   font-size: 13px;
   text-align: center;
   font-weight: bold;
@@ -10,52 +10,63 @@
   transition: 0.2s;
 } 
 
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: black;
-  color: grey;
+  color: white;
   text-align: center;
   font-size: 13px;
 }
 
 #fixed {
 	border-style: solid;
-	margin-top: 10px;
-	border-color: grey;
-	background-color: grey;
+	margin-top: 2px;
+  margin-right: 5px;
+	border-color: black;
+	background-color: black;
 	position: fixed; 
+  right:0;
+  top: 65px;
+  height: 30px;
 
 }
 
-/*body {
-	background-image: url("images/blue.jpeg");
-	height: 700px;
+#chef {
+  position:fixed;
+  margin-top: 0px; 
+  margin-left: 0px;
+  top:0; 
+  left:0; 
+}
+
+#right {
+  position:fixed;
+  margin-top: 5px; 
+  margin-right: 0px;
+  top:0; 
+  right:0; 
+}
+
+body {
+	background-image: url("images/0.jpg");
+  height: 500px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #cccccc;
-} */
+} 
 
-#chef {
-	margin-top: 0px;
-	margin-right: 100%;
-}
-
-/*#(li id ) {
-	margin-left: 50%;
-
-}
-
-#(li id) {
-  margin-right: 20%;
-}*/
 
 #breakfast {
 	margin-top: 60px;
 	margin-bottom: 40px;
 }
 
-
+.fix {
+  background-color: black;
+  color: white;
+}
