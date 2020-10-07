@@ -2,12 +2,16 @@
                 //Functionality For The Button, Tips//
 
 $("#tips").click( function() {
+	$("body").css("background-image","url('images/m.jpg')").css("color","white");
       $("#tip").append(
-      	'<li class="first">Read the whole recipe first.</li>',
-      	'<li class="first">Always sharpen knives.</li>',
-      	'<li class="first">Use the right pans.</li>',
-      	'<li class="first">Dry meats and vegetables before cooking them.</li>',
-      	'<li class="first">Clean as you go.</li>'
+      	'<li class="first">Read the whole recipe first.</li><br>',
+      	'<li class="first">Always sharpen knives.</li><br>',
+      	'<li class="first">Use the right pans.</li><br>',
+      	'<li class="first">Dry meats and vegetables before cooking them.</li><br>',
+      	'<li class="first">Take Your Food`s Temperature.</li><br>',
+      	'<li class="first">Start With a Hot Pan.</li><br>',
+      	'<li class="first">Tenderize Your Meat.</li><br>',
+      	'<li class="first">Clean as you go.</li><br>'
       	)
 });
 
@@ -15,23 +19,23 @@ $("#tips").click( function() {
              //Input For More Recipes, image of food, buttons(ingredient and steps)//
 
 var array = ['Breakfast', 'Lunch', 'Dinner', 'Sweets'];
-
 var x = $("#enter").one("click", function() {
+ $("body").css("background-image","url('images/m.jpg')").css('background-repeat', 'repeat').css("color","white");
 	if (array[0] === $("#input").val()) {
 		$("#breakfast").append(
-			'<li>5-Minute Omelet  <button id="in1">Ingredients</button> <button id="ste1">Steps</button> <img src="images/egg1.jpg" id="img1" width="50" height="50"> <ul id="ing1"></ul> <br> <ol id="step1"></ol>  </li>'
+			'<div id="img1"><img src="images/egg1.jpg" width="150" height="150"> </div><br> <li> 5-Minute Omelet <button id="in1">Ingredients</button> <button id="ste1">Steps</button> <ul id="ing1"></ul> <br> <ol id="step1"></ol>  </li>'
 			)}
 	else if (array[1] === $("#input").val()) {
 		$("#lunch").append(
-			'<li>Meatballs <button id="in2">Ingredients</button> <button id="ste2">Steps</button> <img src="images/meat.jpg" id="img2" width="50" height="50"> <ul id="ing2"></ul> <br> <ol id="step2"></ol> </li>'
+			'<div id="img2"><img src="images/meat.jpg" id="img2" width="150" height="150"> </div><br> <li>Meatballs <button id="in2">Ingredients</button> <button id="ste2">Steps</button><ul id="ing2"></ul> <br> <ol id="step2"></ol> </li>'
 			)}
 	else if (array[2] === $("#input").val()) {	
 		$("#dinner").append(
-			'<li>Pasta <button id="in3">Ingredients</button> <button id="ste3">Steps</button> <img src="images/pasta.jpg" id="img3" width="50" height="50"> <ul id="ing3"></ul> <br> <ol id="step3"></ol> </li>'
+			'<div id="img3"> <img src="images/pasta.jpg" width="150" height="150"> </div><br><li>Pasta <button id="in3">Ingredients</button> <button id="ste3">Steps</button><ul id="ing3"></ul> <br> <ol id="step3"></ol> </li>'
 			)}
 	else if (array[3] === $("#input").val()) {	
 		$("#sweets").append(
-			'<li>Cake <button id="in4">Ingredients</button> <button id="ste4">Steps</button> <img src="images/cake.jpg" id="img4" width="50" height="50">  <ul id="ing4"></ul> <br> <ol id="step4"></ol> </li>'
+			'<div id="img4"> <img src="images/cake.jpg"  width="150" height="150"></div><br> <li>Cake <button id="in4">Ingredients</button> <button id="ste4">Steps</button>  <ul id="ing4"></ul> <br> <ol id="step4"></ol> </li>'
 			)}
 });
 
@@ -44,8 +48,7 @@ $("#breakfast").one("click", "#in1", function() {
 		'<li>2 eggs</li>',
 		'<li>1 tablespoon clarified butter (or whole butter)</li>',
 		'<li>2 tablespoons whole milk</li>',
-		'<li>1/8 teaspoon salt (to taste)</li>',
-		'<li>1/8 teaspoon ground black pepper</li>'
+		'<li>1/8 teaspoon salt (to taste)</li>'
 		)
 });
 
@@ -65,8 +68,7 @@ $("#lunch").one("click", "#in2", function() {
 		'<li>1 large egg</li>',
 		'<li>1/2 cup grated Parmesan cheese</li>',
 		'<li>1 pound ground meat</li>',
-		'<li>1/2 cup finely chopped onion</li>',
-		'<li>1 clove garlic</li>'
+		'<li>1/2 cup finely chopped onion</li>'
 		)
 });
 
@@ -105,9 +107,8 @@ $("#sweets").one("click", "#in4", function() {
 		'<li>2 cups all-purpose flour</li>',
 		'<li>2 cups sugar</li>',
 		'<li>3/4 cup unsweetened cocoa powder</li>',
-		'<li>2 teaspoons baking powder</li>',
+		'<li>2 teaspoons baking powder and vanilla extract</li>',
 		'<li>2 large eggs</li>',
-		'<li>2 teaspoons vanilla extract</li>',
 		'<li>1 cup boiling water</li>'
 		)
 });
@@ -117,7 +118,6 @@ $("#sweets").one("click", "#ste4", function() {
 		'<li>Add flour, sugar, cocoa, baking powder, baking soda, salt and espresso powder to a large bowl or the bowl of a stand mixer. </li>',
 		'<li>Add milk, vegetable oil, eggs, and vanilla to flour mixture and mix together on medium speed until well combined.</li>',
 		'<li>Distribute cake batter evenly between the two prepared cake pans. Bake for 30-35 minutes.</li>',
-		'<li>Remove from the oven and allow to cool for about 10 minutes</li>',
 		'<li>Frost cake with Chocolate Buttercream Frosting.</li>'
 		)
 });
@@ -126,14 +126,16 @@ $("#sweets").one("click", "#ste4", function() {
                        //Button Contact us (Details)//
 
 $("#info").one("click", function() {
-     $("<p> Phone: <br>If you like to hear a voice at the other end, we're there for you with everything you need.<br> Call +962 6 400 1000 <br><br>Email adress:<br> Because you might need help anytime, day-or-night. So email and we'll get back to you as soon as possible.In order to resolve your query quickly, please provide the following: <ul><li>First name.</li><li>Last name.</li><li>Mobile number.</li><li>Details of your query.</li></ul> areenbadran9@gmail.com</p>").appendTo("body");
+	$("body").css("background-image","url('images/m.jpg')").css("color","grey");
+     $("<p> Phone: <br>If you like to hear a voice at the other end, <br> we're there for you with everything you need.<br> Call +962 6 400 1000 <br><br>Email adress:<br> Because you might need help anytime, day-or-night.<br> So email and we'll get back to you as soon as possible.In order to resolve your query quickly,<br> please provide the following: <ul><li>First name.</li><li>Last name.</li><li>Mobile number.</li><li>Details of your query.</li></ul> areenbadran9@gmail.com</p>").appendTo("body");
 });
 
 //============================================================================================
                         //To add More Recipes//
 
 $("#add").one("click", function() {
-	$("body").append("<p class='yay'>Recipe Name:</p>", "<input id='input-recipe1' class='yay' onchange='saveValue(this)'></input> <button id='add-recipe1' class='yay'>add</button>");
+	$("body").css("background-image","url('images/m.jpg')").css('background-repeat', 'repeat').css("color","white");
+	$("body").append("<p class='yay'>Recipe Name:</p>", "<input id='input-recipe1' class='yay' size='40'></input> <button id='add-recipe1' class='yay'>add</button>");
 	    $("#add-recipe1").click( function() {
 	    	var word = $("#input-recipe1").val();
 	    	$("<p class='del'></p>").text(word).appendTo("#all");
@@ -142,7 +144,7 @@ $("#add").one("click", function() {
 	});
 
 $("#add").one("click", function() {
-	$("body").append("<p class='yay'>Recipe Ingredients:</p>", "<input id='input-recipe2' class='yay'></input> <button id='add-recipe2' class='yay'>add</button>");
+	$("body").append("<p class='yay'>Recipe Ingredients:</p>", "<input id='input-recipe2' class='yay' size='40'></input> <button id='add-recipe2' class='yay'>add</button>");
 	    $("#add-recipe2").click( function() {
 	    	var word = $("#input-recipe2").val();
 	    	$("<li class='del'></li>").text(word).appendTo("#all");
@@ -151,7 +153,7 @@ $("#add").one("click", function() {
 	});
 
 $("#add").one("click", function() {
-	$("body").append("<p class='yay'>Recipe Steps</p>", "<input id='input-recipe3' class='yay'></input> <button id='add-recipe3' class='yay'>add</button>");
+	$("body").append("<p class='yay'>Recipe Steps:</p>", "<input id='input-recipe3' class='yay' size='40'></input> <button id='add-recipe3' class='yay'>add</button>");
 	    $("#add-recipe3").click( function() {
 	    	var word = $("#input-recipe3").val();
 	    	$("<li class='del'></li>").text(word).appendTo("#all");

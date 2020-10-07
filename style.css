@@ -69,4 +69,33 @@ body {
 .fix {
   background-color: black;
   color: white;
+  font-size: 14px;
+}
+
+#tip {
+  margin-top: 10%;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+#all {
+  text-align: center;
+}
+
+#img1 {
+  text-align: left;
+}
+
+#img2 {
+  text-align: left;
+}
+
+#img3 {
+  text-align: left;
+}
+
+#img4 {
+  text-align: left;
 }
