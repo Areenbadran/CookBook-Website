@@ -1,3 +1,6 @@
+//=======================================================================================
+                //Functionality For The Button, Tips//
+
 $("#tips").click( function() {
       $("#tip").append(
       	'<li class="first">Read the whole recipe first.</li>',
@@ -8,9 +11,12 @@ $("#tips").click( function() {
       	)
 });
 
+//=========================================================================================
+             //Input For More Recipes, image of food, buttons(ingredient and steps)//
+
 var array = ['Breakfast', 'Lunch', 'Dinner', 'Sweets'];
 
-$("#enter").one("click", function() {
+var x = $("#enter").one("click", function() {
 	if (array[0] === $("#input").val()) {
 		$("#breakfast").append(
 			'<li>5-Minute Omelet  <button id="in1">Ingredients</button> <button id="ste1">Steps</button> <img src="images/egg1.jpg" id="img1" width="50" height="50"> <ul id="ing1"></ul> <br> <ol id="step1"></ol>  </li>'
@@ -29,7 +35,9 @@ $("#enter").one("click", function() {
 			)}
 });
 
-//=====================================================================
+
+//=========================================================================================
+                       //To See More Recipes//
 
 $("#breakfast").one("click", "#in1", function() {
 	$("#ing1").append(
@@ -114,24 +122,49 @@ $("#sweets").one("click", "#ste4", function() {
 		)
 });
 
-/*
-$("#add").click( function() {
-	$("#put").append('<input type="text" id="inp" size="100"></input><br>');
-	$("#put").append('<button id="a">add</button><br><br>');
-	
+//============================================================================================
+                       //Button Contact us (Details)//
+
+$("#info").one("click", function() {
+     $("<p> Phone: <br>If you like to hear a voice at the other end, we're there for you with everything you need.<br> Call +962 6 400 1000 <br><br>Email adress:<br> Because you might need help anytime, day-or-night. So email and we'll get back to you as soon as possible.In order to resolve your query quickly, please provide the following: <ul><li>First name.</li><li>Last name.</li><li>Mobile number.</li><li>Details of your query.</li></ul> areenbadran9@gmail.com</p>").appendTo("body");
 });
 
-$("#a").click( function() {
-var word = $("#inp").val();
-	$("<p id='ordered'></p>").text(word).appendTo("#put");
+//============================================================================================
+                        //To add More Recipes//
+
+$("#add").one("click", function() {
+	$("body").append("<p>Recipe Name:</p>", "<input id='input-recipe1'></input> <button id='add-recipe1'>add</button>");
+	    $("#add-recipe1").click( function() {
+	    	var word = $("#input-recipe1").val();
+	    	$("<p></p>").text(word).appendTo("#all");
+	    	word = $("#input-recipe1").val('');
+	    })
+	});
+
+$("#add").one("click", function() {
+	$("body").append("<p>Recipe Ingredients:</p>", "<input id='input-recipe2'></input> <button id='add-recipe2'>add</button>");
+	    $("#add-recipe2").click( function() {
+	    	var word = $("#input-recipe2").val();
+	    	$("<li></li>").text(word).appendTo("#all");
+	    	word = $("#input-recipe2").val('');
+	    })
+	});
+
+$("#add").one("click", function() {
+	$("body").append("<p>Recipe Steps</p>", "<input id='input-recipe3'></input> <button id='add-recipe3'>add</button>");
+	    $("#add-recipe3").click( function() {
+	    	var word = $("#input-recipe3").val();
+	    	$("<li></li>").text(word).appendTo("#all");
+	    	word = $("#input-recipe3").val('');
+	    })
+	});
+
+//=============================================================================================
+                          //Button Recipes To see all the added Recipes//
+
+$("#recipes").one("click", function() {
+	$("#all").show();
 });
-
-
-
-$("#recipes").click( function() {
-	$("#put").show();
-});
-*/
 
 
 
